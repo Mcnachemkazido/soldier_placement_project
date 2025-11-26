@@ -22,10 +22,14 @@ class Management:
             full_houses.append(house)
         return full_houses , self.list_of_soldiers
 
-
-s2 = Soldier(1,2,4,56,5)
-s1 = Soldier(1,2,4,56,5)
-m= Management([s1,s2])
-f = m.fill_the_houses()
-print(f[0][0].is_full())
-
+#
+# s2 = Soldier(1,2,4,56,5)
+# s1 = Soldier(1,2,4,56,5)
+# m= Management([s1,s2])
+# f = m.fill_the_houses()
+# print(f[0][0].is_full())
+# #
+# x = [i for i in range(200)]
+# m = Management(x)
+# f = m.fill_the_houses()
+# print(f[0][0].rooms[0].sleeping_places)
