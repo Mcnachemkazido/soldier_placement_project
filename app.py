@@ -17,9 +17,10 @@ def soldier_deployment(file:UploadFile):
     m.fill_the_houses()
     return m.soldier_deployment_details()
 
-#
-# @app.get("/waitingLis"):
-# def return_of_waiting_list
+
+@app.get("/waitingLis")
+def return_of_waiting_list():
+    return
 
 
 
