@@ -2,11 +2,14 @@ from models.room import Room
 from models.house import House
 
 
-
 class Management:
-    def __init__(self,list_of_soldiers):
-        self.list_of_soldiers = list_of_soldiers
+    def __init__(self):
+        self.list_of_soldiers = None
         self.placement_list = []
+
+    def soldier_absorption(self,list_soldier):
+        self.list_of_soldiers = list_soldier
+
 
     def fill_the_houses(self):
         full_houses = []
@@ -32,14 +35,12 @@ class Management:
         waiting_list = []
 
         for s in self.placement_list:
-            already.append({"name":s.name,"is_it_placeds":s.is_it_placed,
+            already.append({"name":s.distance,"is_it_placeds":s.is_it_placed,
                             "Placement details":s.placement_details})
 
         for s in self.list_of_soldiers:
-            waiting_list.append({"name":s.name,"is_it_placeds":s.is_it_placed,
+            waiting_list.append({"name":s.distance,"is_it_placeds":s.is_it_placed,
                             "Placement details":"waiting list"})
-
-
 
         return {"amount of placement":len(self.placement_list),
                 "waiting_list":len(self.list_of_soldiers),
